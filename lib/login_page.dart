@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -21,43 +23,49 @@ class LoginPage extends StatelessWidget {
             style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
           ),
         ),
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                CircleAvatar(
-                  radius: 38,
-                  backgroundColor: Colors.amber,
-                  backgroundImage: AssetImage('assets/images/im.jpg'),
-                  // child: Image.asset(
-                  //   'assets/images/im.jpg',
-                  //   width: 80,
-                  //   height: 80,
-                  // ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
-            Text(
-              'Turat Allybaev',
-              style: GoogleFonts.pacifico(color: Colors.white, fontSize: 40),
-
-              //style: TextStyle(color: Colors.white, fontSize: 40),
-            ),
-            Text(
-              'Flutter devoloper',
-              // style: (
-              //     color: Color.fromARGB(255, 200, 198, 198),
-              //      fontSize: 20)
-              style: GoogleFonts.prompt(
-                color: Color.fromARGB(255, 208, 204, 204),
-                fontWeight: FontWeight.w300,
+        body: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              const Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  CircleAvatar(
+                    radius: 38,
+                    backgroundColor: Colors.amber,
+                    backgroundImage: AssetImage('assets/images/im.jpg'),
+                  ),
+                ],
               ),
-            ),
-            const TextField()
-          ],
+              const SizedBox(height: 20),
+              Text(
+                'Turat Allybaev',
+                style: GoogleFonts.pacifico(color: Colors.white, fontSize: 40),
+              ),
+              Text(
+                'Flutter devoloper',
+                style: GoogleFonts.prompt(
+                    color: Color.fromARGB(255, 235, 233, 233),
+                    fontSize: 17,
+                    fontWeight: FontWeight.w600,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Colors.white),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              TextFormField(
+                decoration: const InputDecoration(
+                  filled: true,
+                  border: OutlineInputBorder(),
+                  hintText: "+996 557 400 345",
+                  prefixIcon: Icon(Icons.call),
+                ),
+              ),
+              TextFormField(),
+            ],
+          ),
         ));
   }
-} //11:55
+}
