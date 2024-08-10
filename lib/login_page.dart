@@ -54,14 +54,30 @@ class LoginPage extends StatelessWidget {
                 height: 20,
               ),
               TextFormField(
+                style: const TextStyle(color: Color(0xff056c5c)),
                 decoration: const InputDecoration(
                   filled: true,
                   border: OutlineInputBorder(),
                   hintText: "+996 557 400 345",
-                  prefixIcon: Icon(Icons.call),
+                  prefixIcon: Icon(
+                    Icons.call,
+                    color: Color(0xff056c5c),
+                  ),
                 ),
               ),
-              TextFormField(),
+              const SizedBox(height: 20),
+              TextFormField(
+                style: const TextStyle(color: Color(0xff056c5c)),
+                decoration: const InputDecoration(
+                  filled: true,
+                  border: OutlineInputBorder(),
+                  hintText: "+996 557 400 345",
+                  prefixIcon: Icon(
+                    Icons.call,
+                    color: Color(0xff056c5c),
+                  ),
+                ),
+              ),
             ],
           ),
         ));
